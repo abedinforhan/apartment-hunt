@@ -1,16 +1,16 @@
-import './App.scss';
-import Home from './components/Home/Home/Home';
+import { createContext, useState } from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  
+
+  Route, Switch
 } from "react-router-dom";
+import './App.scss';
 import ApartmentDetails from './components/ApartmentDetails/ApartmentDetails/ApartmentDetails';
-import Login from './components/Login/Login/Login';
+import Admin from './components/Dashboard/Admin/Admin';
+import User from './components/Dashboard/User/User';
 import Header from './components/Home/Header/Header';
-import { createContext, useState } from 'react';
-import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import Home from './components/Home/Home/Home';
+import Login from './components/Login/Login/Login';
 
 export const UserContext = createContext();
 
@@ -23,7 +23,7 @@ function App() {
 
     <Router>
       <Switch>
-      <Route path="/home">
+      <Route exact  path="/home">
       <Home></Home>
        </Route>
        <Route exact path="/">
@@ -37,7 +37,12 @@ function App() {
         <Route path="/rentDetails/:apartmentId">
           <ApartmentDetails />
         </Route>
-
+        <Route path = '/admin' >
+          <Admin/>
+        </Route>
+        <Route path = '/dashboard/user'>
+             <User/>
+        </Route>
 
       </Switch>
     </Router>

@@ -1,28 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import './AddAdmin.scss';
 
 
 const AddAdmin = () => {
 
-
-const [houses, setHouses] = useState()
-
-useEffect(() => {
-    fetch('http://localhost:8080/houses')
-    .then(res =>  res.json())
-    .then(data => setHouses(data[0]))
-},[])
-
-
-console.log(houses)
-
     //hook form 
     const { register, handleSubmit,errors } = useForm();
 
     const onSubmit = data => {
-        // console.log(data)
-        fetch('http://localhost:8080/addAdminEmail', {
+        fetch('https://shielded-waters-93893.herokuapp.com/addAdminEmail', {
           method: 'POST',
           body: JSON.stringify(data),
           headers: {

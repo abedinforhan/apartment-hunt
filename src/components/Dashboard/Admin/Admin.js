@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import SplitPane from 'react-split-pane';
-import Logo from '../../../Images/Logo.png';
+import Logo from '../../../images/logos/Logo.png';
 import AddAdmin from '../Admin/AddAdmin/AddAdmin';
 import AddRentHouseForm from '../Admin/AddHouse/AddRentHouseForm';
 import BookingList from '../Admin/Bookinglist/BookingList';

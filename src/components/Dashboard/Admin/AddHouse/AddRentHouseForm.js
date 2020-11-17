@@ -23,7 +23,7 @@ const AddRentHouseForm = () => {
         formData.append('bathroom',bathroom)
 
 
-         fetch('http://localhost:8080/addHousebyAdmin', 
+         fetch('https://shielded-waters-93893.herokuapp.com//addHousebyAdmin', 
         {
             method: 'POST',
             body: formData

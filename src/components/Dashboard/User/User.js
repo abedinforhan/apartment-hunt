@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import SplitPane from 'react-split-pane';
-import Logo from '../../../Images/Logo.png';
+// import Logo from '../../../images/logos/Logo.png';
 import MyRent from './MyRent';
-import './User.scss';
 
 
 
@@ -25,7 +24,7 @@ const User= () => {
       resizerStyle={styles}
     >
       <menu className='admin__menu'>
-        <img src={Logo}/>
+        <img src=''/>
         <div>
             <Link to="/User"><i className="fa fa-home mr-2" aria-hidden="true"></i>My Rent</Link>
         </div>

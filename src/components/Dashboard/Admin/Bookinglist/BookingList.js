@@ -5,13 +5,14 @@ import TableRow from './TableRow';
 const BookingList = () => {
   
     const [houses,setHouses] =useState([])
-
+     
     useEffect(() => {
-       fetch('http://localhost:8080/housesByCustomer?email=farhanengn@gmail.com')
+       fetch('https://shielded-waters-93893.herokuapp.com/customerHouses')
       .then(res => res.json())
       .then(data => setHouses(data))
+      .then(()=>console.log(houses))
       },[])
-      console.log(houses);
+      
 
     return (
        <div className="bookingList ">
