@@ -1,0 +1,23 @@
+.admin {
+  height: 100vh;
+  width: 100%;
+  color: black;
+}
+
+.admin__menu {
+  margin: 30px;
+  font-size: 14px;
+  img {
+    height: 50px;
+    width: 100px;
+    object-fit: contain;
+    margin-bottom: 40px;
+  }
+  div {
+    margin-bottom: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
